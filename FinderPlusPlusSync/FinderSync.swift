@@ -46,7 +46,7 @@ class FinderSync: FIFinderSync {
 
     func createNewFileSender(sender: AnyObject?) {
         let target = FIFinderSyncController.defaultController().targetedURL()
-
+        self.createUntitledFile(target)
     }
 
     func openInTerminalSender(sender: AnyObject?) {
@@ -77,9 +77,33 @@ class FinderSync: FIFinderSync {
         }
     }
 
-    private func createNewFile(path: NSURL?, fileName: NSString) {
+    private func createUntitledFile(path: NSURL?) {
         if let targetURL = path!.filePathURL {
-            xpcConnection.remoteObjectProxy.createFile(targetURL, fileName: fileName)
+            let untitledFileNameFormat = NSLocalizedString("untitled file", comment: "untitled file")
+            var untitledFileName = untitledFileNameFormat
+            var index = 1
+
+            // check untitled file %d is exist
+            while true {
+                let destURL = targetURL.URLByAppendingPathComponent(untitledFileName)
+                if !NSFileManager.defaultManager().fileExistsAtPath(destURL.path!) {
+                    break
+                } else {
+                    untitledFileName = untitledFileNameFormat.stringByAppendingFormat(" %d", index)
+                    index += 1
+                }
+            }
+
+            createNewFile(path, fileName: untitledFileName)
+        }
+        else {
+            print("Create file in invalid path")
+        }
+    }
+
+    private func createNewFile(path: NSURL?, fileName: String) {
+        if let targetURL = path!.filePathURL {
+            xpcConnection.remoteObjectProxy.createNewFile(targetURL, fileName: fileName)
         }
         else {
             print("Create file in invalid path")

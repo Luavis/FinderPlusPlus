@@ -92,8 +92,8 @@
 		A7F37B3E1D2298230038F542 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A7F37B401D2298230038F542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7F37B481D229A3E0038F542 /* SwiftBridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftBridgeHeader.h; sourceTree = "<group>"; };
-		A7F37B4E1D231FCE0038F542 /* FinderPlusPlusHelper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinderPlusPlusHelper-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		A7F37B511D239D4A0038F542 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		A7F37B531D23B2F80038F542 /* FinderPlusPlusHelper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinderPlusPlusHelper-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,8 +175,8 @@
 		A7F37B391D2298230038F542 /* FinderPlusPlusHelper */ = {
 			isa = PBXGroup;
 			children = (
+				A7F37B531D23B2F80038F542 /* FinderPlusPlusHelper-Bridging-Header.h */,
 				A7F37B511D239D4A0038F542 /* Utils.swift */,
-				A7F37B4E1D231FCE0038F542 /* FinderPlusPlusHelper-Bridging-Header.h */,
 				A7F37B3A1D2298230038F542 /* FinderPlusPlusHelperProtocol.h */,
 				A7F37B3B1D2298230038F542 /* FinderPlusPlusHelper.h */,
 				A7F37B3C1D2298230038F542 /* FinderPlusPlusHelper.m */,
@@ -532,7 +532,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = luavis.FinderPlusPlusHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "FinderPlusPlusHelper-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "FinderPlusPlusHelper/FinderPlusPlusHelper-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -548,7 +548,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = luavis.FinderPlusPlusHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "FinderPlusPlusHelper-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "FinderPlusPlusHelper/FinderPlusPlusHelper-Bridging-Header.h";
 			};
 			name = Release;
 		};

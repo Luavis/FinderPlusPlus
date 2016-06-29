@@ -18,6 +18,6 @@ typedef NS_ENUM(NSUInteger, TerminalType) {
 
 - (void)runScript:(NSString *)command params:(NSArray<NSString *> *)arguments;
 - (void)openTerminal:(NSURL *)url terminalType:(TerminalType)terminalType;
-- (void)createNewFile:(NSURL *)path fileName:(NSString *)filename
+- (void)createNewFile:(NSURL *)path fileName:(NSString *)filename;
     
 @end
