@@ -9,10 +9,55 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>FinderPlusPlusHelper.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>FinderPlusPlusSync.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>A72B0D511D1BC14300E45C25</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A72B0D651D1BC16C00E45C25</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A72B0DE61D1D15A400E45C25</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A7F37AF31D2293EE0038F542</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A7F37AFE1D2297070038F542</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A7F37B111D2297B00038F542</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A7F37B241D2298010038F542</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A7F37B371D2298220038F542</key>
 		<dict>
 			<key>primary</key>
 			<true/>

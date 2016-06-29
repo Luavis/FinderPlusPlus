@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  FinderPlusPlus
+
+  Created by Luavis on 6/23/16.
+  Copyright © 2016 Luavis. All rights reserved.
+*/
+
+"New file" = "새로운 파일";
+"Copy path" = "파일 주소 복사";
+"Open in terminal" = "터미널에서 열기";

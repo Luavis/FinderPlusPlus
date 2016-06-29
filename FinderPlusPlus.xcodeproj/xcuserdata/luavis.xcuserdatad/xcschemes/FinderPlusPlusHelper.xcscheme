@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A72B0D511D1BC14300E45C25"
-               BuildableName = "FinderPlusPlus.app"
-               BlueprintName = "FinderPlusPlus"
+               BlueprintIdentifier = "A7F37B371D2298220038F542"
+               BuildableName = "FinderPlusPlusHelper.xpc"
+               BlueprintName = "FinderPlusPlusHelper"
                ReferencedContainer = "container:FinderPlusPlus.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A72B0D511D1BC14300E45C25"
-            BuildableName = "FinderPlusPlus.app"
-            BlueprintName = "FinderPlusPlus"
-            ReferencedContainer = "container:FinderPlusPlus.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A72B0D511D1BC14300E45C25"
-            BuildableName = "FinderPlusPlus.app"
-            BlueprintName = "FinderPlusPlus"
+            BlueprintIdentifier = "A7F37B371D2298220038F542"
+            BuildableName = "FinderPlusPlusHelper.xpc"
+            BlueprintName = "FinderPlusPlusHelper"
             ReferencedContainer = "container:FinderPlusPlus.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A72B0D511D1BC14300E45C25"
-            BuildableName = "FinderPlusPlus.app"
-            BlueprintName = "FinderPlusPlus"
+            BlueprintIdentifier = "A7F37B371D2298220038F542"
+            BuildableName = "FinderPlusPlusHelper.xpc"
+            BlueprintName = "FinderPlusPlusHelper"
             ReferencedContainer = "container:FinderPlusPlus.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

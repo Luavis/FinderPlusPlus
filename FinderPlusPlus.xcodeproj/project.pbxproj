@@ -10,7 +10,67 @@
 		A72B0D561D1BC14300E45C25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72B0D551D1BC14300E45C25 /* AppDelegate.swift */; };
 		A72B0D581D1BC14300E45C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A72B0D571D1BC14300E45C25 /* Assets.xcassets */; };
 		A72B0D5B1D1BC14300E45C25 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A72B0D591D1BC14300E45C25 /* MainMenu.xib */; };
+		A72B0D6B1D1BC16C00E45C25 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72B0D6A1D1BC16C00E45C25 /* FinderSync.swift */; };
+		A72B0D6F1D1BC16C00E45C25 /* FinderPlusPlusSync.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A72B0D661D1BC16C00E45C25 /* FinderPlusPlusSync.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A72B0D761D1BC25900E45C25 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A72B0D781D1BC25900E45C25 /* Localizable.strings */; };
+		A7F37B3D1D2298230038F542 /* FinderPlusPlusHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F37B3C1D2298230038F542 /* FinderPlusPlusHelper.m */; };
+		A7F37B3F1D2298230038F542 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F37B3E1D2298230038F542 /* main.m */; };
+		A7F37B431D2298230038F542 /* FinderPlusPlusHelper.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = A7F37B381D2298220038F542 /* FinderPlusPlusHelper.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A7F37B4A1D22D8AD0038F542 /* FinderPlusPlusHelper.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = A7F37B381D2298220038F542 /* FinderPlusPlusHelper.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A7F37B521D239D4A0038F542 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F37B511D239D4A0038F542 /* Utils.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A72B0D6D1D1BC16C00E45C25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A72B0D4A1D1BC14300E45C25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A72B0D651D1BC16C00E45C25;
+			remoteInfo = FinderPlusPlusSync;
+		};
+		A7F37B411D2298230038F542 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A72B0D4A1D1BC14300E45C25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7F37B371D2298220038F542;
+			remoteInfo = FinderPlusPlusHelper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A72B0D731D1BC16C00E45C25 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A72B0D6F1D1BC16C00E45C25 /* FinderPlusPlusSync.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A72B0DF61D1D15A400E45C25 /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				A7F37B431D2298230038F542 /* FinderPlusPlusHelper.xpc in Embed XPC Services */,
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7F37B491D22D89E0038F542 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/XPCServices;
+			dstSubfolderSpec = 1;
+			files = (
+				A7F37B4A1D22D8AD0038F542 /* FinderPlusPlusHelper.xpc in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A72B0D521D1BC14300E45C25 /* FinderPlusPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinderPlusPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -18,10 +78,40 @@
 		A72B0D571D1BC14300E45C25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A72B0D5A1D1BC14300E45C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A72B0D5C1D1BC14300E45C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A72B0D661D1BC16C00E45C25 /* FinderPlusPlusSync.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FinderPlusPlusSync.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A72B0D691D1BC16C00E45C25 /* FinderPlusPlusSync.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FinderPlusPlusSync.entitlements; sourceTree = "<group>"; };
+		A72B0D6A1D1BC16C00E45C25 /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
+		A72B0D6C1D1BC16C00E45C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A72B0D7A1D1BC27C00E45C25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A72B0D7B1D1BC36700E45C25 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		A72B0D7C1D1BC36700E45C25 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A7F37B381D2298220038F542 /* FinderPlusPlusHelper.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = FinderPlusPlusHelper.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7F37B3A1D2298230038F542 /* FinderPlusPlusHelperProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderPlusPlusHelperProtocol.h; sourceTree = "<group>"; };
+		A7F37B3B1D2298230038F542 /* FinderPlusPlusHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderPlusPlusHelper.h; sourceTree = "<group>"; };
+		A7F37B3C1D2298230038F542 /* FinderPlusPlusHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinderPlusPlusHelper.m; sourceTree = "<group>"; };
+		A7F37B3E1D2298230038F542 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A7F37B401D2298230038F542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7F37B481D229A3E0038F542 /* SwiftBridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftBridgeHeader.h; sourceTree = "<group>"; };
+		A7F37B4E1D231FCE0038F542 /* FinderPlusPlusHelper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinderPlusPlusHelper-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		A7F37B511D239D4A0038F542 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A72B0D4F1D1BC14300E45C25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A72B0D631D1BC16C00E45C25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7F37B351D2298220038F542 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,6 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				A72B0D541D1BC14300E45C25 /* FinderPlusPlus */,
+				A72B0D671D1BC16C00E45C25 /* FinderPlusPlusSync */,
+				A7F37B391D2298230038F542 /* FinderPlusPlusHelper */,
 				A72B0D531D1BC14300E45C25 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				A72B0D521D1BC14300E45C25 /* FinderPlusPlus.app */,
+				A72B0D661D1BC16C00E45C25 /* FinderPlusPlusSync.appex */,
+				A7F37B381D2298220038F542 /* FinderPlusPlusHelper.xpc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,6 +152,40 @@
 			path = FinderPlusPlus;
 			sourceTree = "<group>";
 		};
+		A72B0D671D1BC16C00E45C25 /* FinderPlusPlusSync */ = {
+			isa = PBXGroup;
+			children = (
+				A7F37B481D229A3E0038F542 /* SwiftBridgeHeader.h */,
+				A72B0D6A1D1BC16C00E45C25 /* FinderSync.swift */,
+				A72B0D781D1BC25900E45C25 /* Localizable.strings */,
+				A72B0D6C1D1BC16C00E45C25 /* Info.plist */,
+				A72B0D681D1BC16C00E45C25 /* Supporting Files */,
+			);
+			path = FinderPlusPlusSync;
+			sourceTree = "<group>";
+		};
+		A72B0D681D1BC16C00E45C25 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A72B0D691D1BC16C00E45C25 /* FinderPlusPlusSync.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A7F37B391D2298230038F542 /* FinderPlusPlusHelper */ = {
+			isa = PBXGroup;
+			children = (
+				A7F37B511D239D4A0038F542 /* Utils.swift */,
+				A7F37B4E1D231FCE0038F542 /* FinderPlusPlusHelper-Bridging-Header.h */,
+				A7F37B3A1D2298230038F542 /* FinderPlusPlusHelperProtocol.h */,
+				A7F37B3B1D2298230038F542 /* FinderPlusPlusHelper.h */,
+				A7F37B3C1D2298230038F542 /* FinderPlusPlusHelper.m */,
+				A7F37B3E1D2298230038F542 /* main.m */,
+				A7F37B401D2298230038F542 /* Info.plist */,
+			);
+			path = FinderPlusPlusHelper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -68,15 +196,54 @@
 				A72B0D4E1D1BC14300E45C25 /* Sources */,
 				A72B0D4F1D1BC14300E45C25 /* Frameworks */,
 				A72B0D501D1BC14300E45C25 /* Resources */,
+				A72B0D731D1BC16C00E45C25 /* Embed App Extensions */,
+				A72B0DF61D1D15A400E45C25 /* Embed XPC Services */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A72B0D6E1D1BC16C00E45C25 /* PBXTargetDependency */,
+				A7F37B421D2298230038F542 /* PBXTargetDependency */,
 			);
 			name = FinderPlusPlus;
 			productName = FinderPlusPlus;
 			productReference = A72B0D521D1BC14300E45C25 /* FinderPlusPlus.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A72B0D651D1BC16C00E45C25 /* FinderPlusPlusSync */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A72B0D701D1BC16C00E45C25 /* Build configuration list for PBXNativeTarget "FinderPlusPlusSync" */;
+			buildPhases = (
+				A72B0D621D1BC16C00E45C25 /* Sources */,
+				A72B0D631D1BC16C00E45C25 /* Frameworks */,
+				A72B0D641D1BC16C00E45C25 /* Resources */,
+				A7F37B491D22D89E0038F542 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FinderPlusPlusSync;
+			productName = FinderPlusPlusSync;
+			productReference = A72B0D661D1BC16C00E45C25 /* FinderPlusPlusSync.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		A7F37B371D2298220038F542 /* FinderPlusPlusHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7F37B441D2298230038F542 /* Build configuration list for PBXNativeTarget "FinderPlusPlusHelper" */;
+			buildPhases = (
+				A7F37B341D2298220038F542 /* Sources */,
+				A7F37B351D2298220038F542 /* Frameworks */,
+				A7F37B361D2298220038F542 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FinderPlusPlusHelper;
+			productName = FinderPlusPlusHelper;
+			productReference = A7F37B381D2298220038F542 /* FinderPlusPlusHelper.xpc */;
+			productType = "com.apple.product-type.xpc-service";
 		};
 /* End PBXNativeTarget section */
 
@@ -91,6 +258,17 @@
 					A72B0D511D1BC14300E45C25 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
+					A72B0D651D1BC16C00E45C25 = {
+						CreatedOnToolsVersion = 7.3.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					A7F37B371D2298220038F542 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 				};
 			};
 			buildConfigurationList = A72B0D4D1D1BC14300E45C25 /* Build configuration list for PBXProject "FinderPlusPlus" */;
@@ -100,6 +278,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = A72B0D491D1BC14300E45C25;
 			productRefGroup = A72B0D531D1BC14300E45C25 /* Products */;
@@ -107,6 +286,8 @@
 			projectRoot = "";
 			targets = (
 				A72B0D511D1BC14300E45C25 /* FinderPlusPlus */,
+				A72B0D651D1BC16C00E45C25 /* FinderPlusPlusSync */,
+				A7F37B371D2298220038F542 /* FinderPlusPlusHelper */,
 			);
 		};
 /* End PBXProject section */
@@ -121,6 +302,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A72B0D641D1BC16C00E45C25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A72B0D761D1BC25900E45C25 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7F37B361D2298220038F542 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -132,15 +328,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A72B0D621D1BC16C00E45C25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A72B0D6B1D1BC16C00E45C25 /* FinderSync.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7F37B341D2298220038F542 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7F37B3F1D2298230038F542 /* main.m in Sources */,
+				A7F37B3D1D2298230038F542 /* FinderPlusPlusHelper.m in Sources */,
+				A7F37B521D239D4A0038F542 /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A72B0D6E1D1BC16C00E45C25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A72B0D651D1BC16C00E45C25 /* FinderPlusPlusSync */;
+			targetProxy = A72B0D6D1D1BC16C00E45C25 /* PBXContainerItemProxy */;
+		};
+		A7F37B421D2298230038F542 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7F37B371D2298220038F542 /* FinderPlusPlusHelper */;
+			targetProxy = A7F37B411D2298230038F542 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A72B0D591D1BC14300E45C25 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A72B0D5A1D1BC14300E45C25 /* Base */,
+				A72B0D7B1D1BC36700E45C25 /* ko */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		A72B0D781D1BC25900E45C25 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A72B0D7A1D1BC27C00E45C25 /* en */,
+				A72B0D7C1D1BC36700E45C25 /* ko */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -233,6 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = FinderPlusPlus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = luavis.FinderPlusPlus;
@@ -245,10 +483,72 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = FinderPlusPlus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = luavis.FinderPlusPlus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A72B0D711D1BC16C00E45C25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = FinderPlusPlusSync/FinderPlusPlusSync.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = FinderPlusPlusSync/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = luavis.FinderPlusPlus.FinderPlusPlusSync;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = FinderPlusPlusSync/SwiftBridgeHeader.h;
+			};
+			name = Debug;
+		};
+		A72B0D721D1BC16C00E45C25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = FinderPlusPlusSync/FinderPlusPlusSync.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = FinderPlusPlusSync/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = luavis.FinderPlusPlus.FinderPlusPlusSync;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = FinderPlusPlusSync/SwiftBridgeHeader.h;
+			};
+			name = Release;
+		};
+		A7F37B451D2298230038F542 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = FinderPlusPlusHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = luavis.FinderPlusPlusHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "FinderPlusPlusHelper-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A7F37B461D2298230038F542 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = FinderPlusPlusHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = luavis.FinderPlusPlusHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "FinderPlusPlusHelper-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -269,6 +569,24 @@
 			buildConfigurations = (
 				A72B0D601D1BC14300E45C25 /* Debug */,
 				A72B0D611D1BC14300E45C25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A72B0D701D1BC16C00E45C25 /* Build configuration list for PBXNativeTarget "FinderPlusPlusSync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A72B0D711D1BC16C00E45C25 /* Debug */,
+				A72B0D721D1BC16C00E45C25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7F37B441D2298230038F542 /* Build configuration list for PBXNativeTarget "FinderPlusPlusHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7F37B451D2298230038F542 /* Debug */,
+				A7F37B461D2298230038F542 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
