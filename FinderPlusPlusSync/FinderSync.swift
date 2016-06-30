@@ -34,14 +34,37 @@ class FinderSync: FIFinderSync {
     }
 
     override func menuForMenuKind(menuKind: FIMenuKind) -> NSMenu {
-        let iTermMenuTitle = NSLocalizedString("Open in terminal", comment: "Open in terminal")
         let newFileTitle = NSLocalizedString("New file", comment: "New file")
+        let iTermMenuTitle = NSLocalizedString("Open in terminal", comment: "Open in terminal")
+        let copyPathTitle = NSLocalizedString("Copy path", comment: "Copy path")
 
         let menu = NSMenu(title: "")
-        menu.addItemWithTitle(iTermMenuTitle, action: #selector(openInTerminalSender(_:)), keyEquivalent: "")
         menu.addItemWithTitle(newFileTitle, action: #selector(createNewFileSender(_:)), keyEquivalent: "")
+        menu.addItemWithTitle(iTermMenuTitle, action: #selector(openInTerminalSender(_:)), keyEquivalent: "")
+        menu.addItemWithTitle(copyPathTitle, action: #selector(copyPathSender(_:)), keyEquivalent: "")
 
         return menu
+    }
+
+    func copyPathSender(sender: AnyObject?) {
+        let selectedItems = FIFinderSyncController.defaultController().selectedItemURLs()
+        var filePaths:[String] = [String]()
+
+        if let selectedItems = selectedItems {
+            for selectedItem in selectedItems {
+                let filePath = self.getFilePathFromURL(selectedItem)
+                filePaths.append(filePath)
+            }
+
+            let copyContent = filePaths.joinWithSeparator("\n")
+            NSPasteboard.generalPasteboard().clearContents()
+            NSPasteboard.generalPasteboard().declareTypes([NSStringPboardType], owner: self)
+            NSPasteboard.generalPasteboard().setString(copyContent, forType: NSStringPboardType)
+        }
+        else {
+            let target = FIFinderSyncController.defaultController().targetedURL()
+            self.openInTerminal(target)
+        }
     }
 
     func createNewFileSender(sender: AnyObject?) {
@@ -66,6 +89,15 @@ class FinderSync: FIFinderSync {
 
     deinit {
         FinderSync.invalidateXPCConnection(self.xpcConnection)
+    }
+
+    private func getFilePathFromURL(target: NSURL?) -> String {
+        if let targetURL = target!.filePathURL {
+            return targetURL.path!
+        }
+        else {
+            return ""
+        }
     }
 
     private func openInTerminal(target: NSURL?) {

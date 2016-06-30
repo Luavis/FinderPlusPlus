@@ -18,6 +18,7 @@
 		A7F37B431D2298230038F542 /* FinderPlusPlusHelper.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = A7F37B381D2298220038F542 /* FinderPlusPlusHelper.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A7F37B4A1D22D8AD0038F542 /* FinderPlusPlusHelper.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = A7F37B381D2298220038F542 /* FinderPlusPlusHelper.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A7F37B521D239D4A0038F542 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F37B511D239D4A0038F542 /* Utils.swift */; };
+		A7FF076E1D24EBE600482642 /* SettingWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FF076D1D24EBE600482642 /* SettingWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		A7F37B481D229A3E0038F542 /* SwiftBridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftBridgeHeader.h; sourceTree = "<group>"; };
 		A7F37B511D239D4A0038F542 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A7F37B531D23B2F80038F542 /* FinderPlusPlusHelper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinderPlusPlusHelper-Bridging-Header.h"; sourceTree = "<group>"; };
+		A7FF076D1D24EBE600482642 /* SettingWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				A72B0D551D1BC14300E45C25 /* AppDelegate.swift */,
+				A7FF076D1D24EBE600482642 /* SettingWindow.swift */,
 				A72B0D571D1BC14300E45C25 /* Assets.xcassets */,
 				A72B0D591D1BC14300E45C25 /* MainMenu.xib */,
 				A72B0D5C1D1BC14300E45C25 /* Info.plist */,
@@ -324,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7FF076E1D24EBE600482642 /* SettingWindow.swift in Sources */,
 				A72B0D561D1BC14300E45C25 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,6 +593,7 @@
 				A7F37B461D2298230038F542 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
