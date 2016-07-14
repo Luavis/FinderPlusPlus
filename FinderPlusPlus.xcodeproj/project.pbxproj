@@ -483,7 +483,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = FinderPlusPlus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = luavis.FinderPlusPlus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luavis.FinderPlusPlus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -496,7 +496,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = FinderPlusPlus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = luavis.FinderPlusPlus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luavis.FinderPlusPlus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -509,7 +509,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = FinderPlusPlusSync/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = luavis.FinderPlusPlus.FinderPlusPlusSync;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luavis.FinderPlusPlus.FinderPlusPlusSync;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = FinderPlusPlusSync/SwiftBridgeHeader.h;
@@ -524,7 +524,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = FinderPlusPlusSync/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = luavis.FinderPlusPlus.FinderPlusPlusSync;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luavis.FinderPlusPlus.FinderPlusPlusSync;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = FinderPlusPlusSync/SwiftBridgeHeader.h;
@@ -539,7 +539,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = FinderPlusPlusHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = luavis.FinderPlusPlusHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luavis.FinderPlusPlusHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "FinderPlusPlusHelper/FinderPlusPlusHelper-Bridging-Header.h";
@@ -555,7 +555,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = FinderPlusPlusHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = luavis.FinderPlusPlusHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luavis.FinderPlusPlusHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "FinderPlusPlusHelper/FinderPlusPlusHelper-Bridging-Header.h";
