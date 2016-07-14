@@ -17,7 +17,7 @@ class FinderSync: FIFinderSync {
     let xpcConnection: NSXPCConnection = FinderSync.createXPCConnection()
 
     static internal func createXPCConnection() -> NSXPCConnection {
-        let xpcConnection = NSXPCConnection(serviceName: "luavis.FinderPlusPlusHelper")
+        let xpcConnection = NSXPCConnection(serviceName: "com.luavis.FinderPlusPlusHelper")
         xpcConnection.remoteObjectInterface = NSXPCInterface(withProtocol: FinderPlusPlusHelperProtocol.self)
         xpcConnection.resume()
 
@@ -34,14 +34,24 @@ class FinderSync: FIFinderSync {
     }
 
     override func menuForMenuKind(menuKind: FIMenuKind) -> NSMenu {
-        let newFileTitle = NSLocalizedString("New file", comment: "New file")
-        let iTermMenuTitle = NSLocalizedString("Open in terminal", comment: "Open in terminal")
-        let copyPathTitle = NSLocalizedString("Copy path", comment: "Copy path")
-
+        let userDefaults = NSUserDefaults(suiteName: "com.luavis")!
         let menu = NSMenu(title: "")
-        menu.addItemWithTitle(newFileTitle, action: #selector(createNewFileSender(_:)), keyEquivalent: "")
-        menu.addItemWithTitle(iTermMenuTitle, action: #selector(openInTerminalSender(_:)), keyEquivalent: "")
-        menu.addItemWithTitle(copyPathTitle, action: #selector(copyPathSender(_:)), keyEquivalent: "")
+
+        if userDefaults.boolForKey(Constants.newFileMenuToggleKey) {
+            let newFileTitle = NSLocalizedString("New file", comment: "New file")
+            menu.addItemWithTitle(newFileTitle, action: #selector(createNewFileSender(_:)), keyEquivalent: "")
+        }
+
+        if userDefaults.boolForKey(Constants.openInTerminalToggleKey) {
+            let iTermMenuTitle = NSLocalizedString("Open in terminal", comment: "Open in terminal")
+            menu.addItemWithTitle(iTermMenuTitle, action: #selector(openInTerminalSender(_:)), keyEquivalent: "")
+
+        }
+
+        if userDefaults.boolForKey(Constants.copyPathToggleKey) {
+            let copyPathTitle = NSLocalizedString("Copy path", comment: "Copy path")
+            menu.addItemWithTitle(copyPathTitle, action: #selector(copyPathSender(_:)), keyEquivalent: "")
+        }
 
         return menu
     }

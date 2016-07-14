@@ -10,7 +10,7 @@ import Cocoa
 
 
 class SettingWindow : NSWindow {
-    
+
     @IBOutlet weak var defaultTerminalMenu: NSMenu!
     @IBOutlet weak var newFileNameTextField: NSTextField!
     @IBOutlet weak var newFileCheckBox: NSButton!
@@ -19,10 +19,79 @@ class SettingWindow : NSWindow {
 
     let iTermPath = NSWorkspace.sharedWorkspace().absolutePathForAppBundleWithIdentifier(Constants.iTermBundlePath)
     let defaultTerminalPath = NSWorkspace.sharedWorkspace().absolutePathForAppBundleWithIdentifier(Constants.defaultTerminalBundlePath)
+    let userDefaults = NSUserDefaults(suiteName: "com.luavis")!
 
 
     override func awakeFromNib() {
         self.fillUpDefaultTerminalSeletion()
+        self.fillUpNewFileName()
+        self.fillUpUserMenu()
+    }
+
+    func selectDefaultIterm(_: AnyObject?) {
+        userDefaults.setValue(Constants.iTermValue, forKey: Constants.userDefaultTerminalKey)
+        userDefaults.synchronize()
+    }
+
+    func selectDefaultdefaultTerminal(_: AnyObject?) {
+        userDefaults.setValue(Constants.defaultTerminalValue, forKey: Constants.userDefaultTerminalKey)
+        userDefaults.synchronize()
+    }
+
+    func toggleNewFileMenu(sender: NSButton) {
+        let state = (sender.state == NSOnState)
+        userDefaults.setBool(state, forKey: Constants.newFileMenuToggleKey)
+        userDefaults.synchronize()
+    }
+
+    func toggleOpenInTerminal(sender: NSButton) {
+        let state = (sender.state == NSOnState)
+        userDefaults.setBool(state, forKey: Constants.openInTerminalToggleKey)
+        userDefaults.synchronize()
+    }
+
+    func toggleCopyFilePath(sender: NSButton) {
+        let state = (sender.state == NSOnState)
+        userDefaults.setBool(state, forKey: Constants.copyPathToggleKey)
+        userDefaults.synchronize()
+    }
+
+    private func fillUpUserMenu() {
+        //        static let newFileMenuToggleKey = "newFile"
+        //        static let openInTerminalToggleKey = "openInTerminal"
+        //        static let copyPathToggleKey = "copyPath"
+
+        let newFileMenuToggle =
+            userDefaults.boolForKey(Constants.newFileMenuToggleKey) ? NSOnState : NSOffState
+        let openInTerminalToggle =
+            userDefaults.boolForKey(Constants.openInTerminalToggleKey) ? NSOnState : NSOffState
+        let copyPathToggle =
+            userDefaults.boolForKey(Constants.copyPathToggleKey) ? NSOnState : NSOffState
+
+        self.newFileCheckBox.state = newFileMenuToggle
+        self.openInTerminalCheckBox.state = openInTerminalToggle
+        self.copyFilePathCheckBox.state = copyPathToggle
+
+        self.newFileCheckBox.target = self
+        self.newFileCheckBox.action = #selector(toggleNewFileMenu(_:))
+
+        self.openInTerminalCheckBox.target = self
+        self.openInTerminalCheckBox.action = #selector(toggleOpenInTerminal(_:))
+
+        self.copyFilePathCheckBox.target = self
+        self.copyFilePathCheckBox.action = #selector(toggleCopyFilePath(_:))
+    }
+
+    private func fillUpNewFileName() {
+        var untitledFileName = NSLocalizedString("untitled file", comment: "untitled file")
+
+        let userUntitledFileName = userDefaults.valueForKey(Constants.userUntitledFileNameKey) as! String?
+
+        if let userUntitledFileName = userUntitledFileName {
+            untitledFileName = userUntitledFileName
+        }
+
+        self.newFileNameTextField.stringValue = untitledFileName
     }
 
     private func fillUpDefaultTerminalSeletion() {
@@ -54,21 +123,21 @@ class SettingWindow : NSWindow {
             self.defaultTerminalMenu.addItem(defaultTerminalMenu!)
         }
 
-        let userDefaultTerminal = NSUserDefaults.standardUserDefaults().valueForKey(Constants.userDefaultTerminalKey) as! String?
+        let userDefaultTerminal = userDefaults.valueForKey(Constants.userDefaultTerminalKey) as! String?
         if let userDefaultTerminal = userDefaultTerminal {
             switch userDefaultTerminal {
-                case Constants.iTermValue:
-                    if let iTermMenu = iTermMenu {
-                        let iTermIndex = self.defaultTerminalMenu.indexOfItem(iTermMenu)
-                        self.selectDefaultTerminalMenu(iTermIndex)
-                    }
-                case Constants.defaultTerminalValue:
-                    if let defaultTerminalMenu = defaultTerminalMenu {
-                        let defaulteTerminalIndex = self.defaultTerminalMenu.indexOfItem(defaultTerminalMenu)
-                        self.selectDefaultTerminalMenu(defaulteTerminalIndex)
-                        break
-                    }
-                default: break
+            case Constants.iTermValue:
+                if let iTermMenu = iTermMenu {
+                    let iTermIndex = self.defaultTerminalMenu.indexOfItem(iTermMenu)
+                    self.selectDefaultTerminalMenu(iTermIndex)
+                }
+            case Constants.defaultTerminalValue:
+                if let defaultTerminalMenu = defaultTerminalMenu {
+                    let defaulteTerminalIndex = self.defaultTerminalMenu.indexOfItem(defaultTerminalMenu)
+                    self.selectDefaultTerminalMenu(defaulteTerminalIndex)
+                    break
+                }
+            default: break
             }
         } else {
             if iTermMenu != nil {
@@ -79,17 +148,8 @@ class SettingWindow : NSWindow {
             }
         }
     }
-
-    func selectDefaultIterm(_: AnyObject?) {
-        NSUserDefaults.standardUserDefaults().setValue(Constants.iTermValue, forKey: Constants.userDefaultTerminalKey)
-
-    }
-
-    func selectDefaultdefaultTerminal(_: AnyObject?) {
-        NSUserDefaults.standardUserDefaults().setValue(Constants.defaultTerminalValue, forKey: Constants.userDefaultTerminalKey)
-    }
-
-    func selectDefaultTerminalMenu(index: Int) {
+    
+    private func selectDefaultTerminalMenu(index: Int) {
         self.defaultTerminalMenu.performActionForItemAtIndex(index)
     }
 }

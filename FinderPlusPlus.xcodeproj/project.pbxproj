@@ -88,6 +88,7 @@
 		A72B0D7A1D1BC27C00E45C25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A72B0D7B1D1BC36700E45C25 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		A72B0D7C1D1BC36700E45C25 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A76DCA0F1D37331200517AB0 /* FinderPlusPlus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FinderPlusPlus.entitlements; sourceTree = "<group>"; };
 		A7F37B381D2298220038F542 /* FinderPlusPlusHelper.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = FinderPlusPlusHelper.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F37B3A1D2298230038F542 /* FinderPlusPlusHelperProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderPlusPlusHelperProtocol.h; sourceTree = "<group>"; };
 		A7F37B3B1D2298230038F542 /* FinderPlusPlusHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderPlusPlusHelper.h; sourceTree = "<group>"; };
@@ -149,6 +150,7 @@
 		A72B0D541D1BC14300E45C25 /* FinderPlusPlus */ = {
 			isa = PBXGroup;
 			children = (
+				A76DCA0F1D37331200517AB0 /* FinderPlusPlus.entitlements */,
 				A72B0D551D1BC14300E45C25 /* AppDelegate.swift */,
 				A7FF076D1D24EBE600482642 /* SettingWindow.swift */,
 				A7FF07731D253C6100482642 /* Constants.swift */,
@@ -264,10 +266,21 @@
 				TargetAttributes = {
 					A72B0D511D1BC14300E45C25 = {
 						CreatedOnToolsVersion = 7.3.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					A72B0D651D1BC16C00E45C25 = {
 						CreatedOnToolsVersion = 7.3.1;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
 							com.apple.Sandbox = {
 								enabled = 1;
 							};
@@ -479,6 +492,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FinderPlusPlus/FinderPlusPlus.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = FinderPlusPlus/Info.plist;
@@ -492,6 +506,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FinderPlusPlus/FinderPlusPlus.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = FinderPlusPlus/Info.plist;

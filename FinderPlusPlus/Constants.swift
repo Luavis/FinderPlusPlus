@@ -14,6 +14,8 @@ class Constants {
     static let iTermValue = "iTerm"
     static let defaultTerminalValue = "defaulteTerminal"
 
+    static let userUntitledFileNameKey = "untitledFileName"
+
     static let newFileMenuToggleKey = "newFile"
     static let openInTerminalToggleKey = "openInTerminal"
     static let copyPathToggleKey = "copyPath"

@@ -8,11 +8,5 @@
 	<array>
 		<string>com.luavis</string>
 	</array>
-	<key>com.apple.security.files.user-selected.read-write</key>
-	<true/>
-	<key>com.apple.security.network.client</key>
-	<true/>
-	<key>com.apple.security.temporary-exception.files.absolute-path.read-only</key>
-	<string>/</string>
 </dict>
 </plist>
