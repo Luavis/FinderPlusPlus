@@ -121,7 +121,13 @@ class FinderSync: FIFinderSync {
 
     private func createUntitledFile(path: NSURL?) {
         if let targetURL = path!.filePathURL {
-            let untitledFileNameFormat = NSLocalizedString("untitled file", comment: "untitled file")
+            let userDefaults = NSUserDefaults(suiteName: "com.luavis")!
+            var untitledFileNameFormat = NSLocalizedString("untitled file", comment: "untitled file")
+            let userUntitledFileNameFormat = userDefaults.valueForKey(Constants.userUntitledFileNameKey) as! String?
+            if let userUntitledFileNameFormat = userUntitledFileNameFormat {
+                untitledFileNameFormat = userUntitledFileNameFormat
+            }
+
             var untitledFileName = untitledFileNameFormat
             var index = 1
 

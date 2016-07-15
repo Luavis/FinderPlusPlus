@@ -9,7 +9,7 @@
 import Cocoa
 
 
-class SettingWindow : NSWindow {
+class SettingWindow : NSWindow, NSTextFieldDelegate {
 
     @IBOutlet weak var defaultTerminalMenu: NSMenu!
     @IBOutlet weak var newFileNameTextField: NSTextField!
@@ -24,7 +24,7 @@ class SettingWindow : NSWindow {
 
     override func awakeFromNib() {
         self.fillUpDefaultTerminalSeletion()
-        self.fillUpNewFileName()
+        self.initFileNameField()
         self.fillUpUserMenu()
     }
 
@@ -56,11 +56,13 @@ class SettingWindow : NSWindow {
         userDefaults.synchronize()
     }
 
-    private func fillUpUserMenu() {
-        //        static let newFileMenuToggleKey = "newFile"
-        //        static let openInTerminalToggleKey = "openInTerminal"
-        //        static let copyPathToggleKey = "copyPath"
+    override func controlTextDidChange(obj: NSNotification) {
+        if obj.object === self.newFileNameTextField {
+            userDefaults.setValue(self.newFileNameTextField.stringValue, forKey: Constants.userUntitledFileNameKey)
+        }
+    }
 
+    private func fillUpUserMenu() {
         let newFileMenuToggle =
             userDefaults.boolForKey(Constants.newFileMenuToggleKey) ? NSOnState : NSOffState
         let openInTerminalToggle =
@@ -82,11 +84,14 @@ class SettingWindow : NSWindow {
         self.copyFilePathCheckBox.action = #selector(toggleCopyFilePath(_:))
     }
 
-    private func fillUpNewFileName() {
+    private func initFileNameField() {
+        self.newFileNameTextField.delegate = self
+        self.fillUpNewFileNameField()
+    }
+
+    private func fillUpNewFileNameField() {
         var untitledFileName = NSLocalizedString("untitled file", comment: "untitled file")
-
         let userUntitledFileName = userDefaults.valueForKey(Constants.userUntitledFileNameKey) as! String?
-
         if let userUntitledFileName = userUntitledFileName {
             untitledFileName = userUntitledFileName
         }
