@@ -7,7 +7,7 @@ in right click menu in the Finder without unlocking OS X SIP (Security
 Integrity Protection, Rootless)
 
 You can download the application file from
-[here](https://github.com/Luavis/FinderPlusPlus/releases/tag/1.0)
+[here](https://github.com/Luavis/FinderPlusPlus/releases/latest)
 
 In current version there are three functions,
 
