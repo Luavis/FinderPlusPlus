@@ -1,8 +1,6 @@
 FinderPlusPlus
 ===
 
-What is this?
----
 FinderPlusPlus is a finder extension which adds some functions
 in right click menu in the Finder without unlocking OS X SIP (Security
 Integrity Protection, Rootless)
