@@ -1,0 +1,21 @@
+
+/* Class = "NSButtonCell"; title = "Copy file path"; ObjectID = "CHg-Eh-8SQ"; */
+"CHg-Eh-8SQ.title" = "Copy file path";
+
+/* Class = "NSWindow"; title = "Preferences"; ObjectID = "OLp-AU-Vmp"; */
+"OLp-AU-Vmp.title" = "Preferences";
+
+/* Class = "NSTextFieldCell"; title = "New file name"; ObjectID = "PJZ-Hm-ekV"; */
+"PJZ-Hm-ekV.title" = "New file name";
+
+/* Class = "NSBox"; title = "Menus"; ObjectID = "Rr7-d5-yaQ"; */
+"Rr7-d5-yaQ.title" = "Menus";
+
+/* Class = "NSButtonCell"; title = "New file"; ObjectID = "TGv-PQ-xKx"; */
+"TGv-PQ-xKx.title" = "New file";
+
+/* Class = "NSButtonCell"; title = "Open in terminal"; ObjectID = "Tx4-9j-HRr"; */
+"Tx4-9j-HRr.title" = "Open in terminal";
+
+/* Class = "NSTextFieldCell"; title = "Default terminal"; ObjectID = "d0P-4F-q8w"; */
+"d0P-4F-q8w.title" = "Default terminal";

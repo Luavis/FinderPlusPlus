@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
-        <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -13,11 +12,7 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="FinderPlusPlus" customModuleProvider="target">
-            <connections>
-                <outlet property="window" destination="szs-Hh-NEh" id="59D-lb-hwX"/>
-            </connections>
-        </customObject>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="FinderPlusPlus" customModuleProvider="target"/>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
@@ -32,7 +27,11 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                            <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                            <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                <connections>
+                                    <action selector="onClickPreferences:" target="Voe-Tx-rLC" id="Fvi-Xe-lvV"/>
+                                </connections>
+                            </menuItem>
                             <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                             <menuItem title="Hide FinderPlusPlus" keyEquivalent="h" id="Olw-nP-bQN">
                                 <connections>
@@ -330,91 +329,5 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="Settings" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" frameAutosaveName="" animationBehavior="default" id="szs-Hh-NEh" customClass="SettingWindow" customModule="FinderPlusPlus" customModuleProvider="target">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="131" y="165" width="303" height="222"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
-            <value key="minSize" type="size" width="303" height="222"/>
-            <value key="maxSize" type="size" width="303" height="222"/>
-            <view key="contentView" id="way-Ru-xIt">
-                <rect key="frame" x="0.0" y="0.0" width="303" height="222"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                <subviews>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bjc-mf-Szb">
-                        <rect key="frame" x="18" y="142" width="90" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="New file name" id="Ora-nQ-n7e">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lhf-bq-Qir">
-                        <rect key="frame" x="147" y="139" width="136" height="22"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="cN6-mZ-cV9">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k4L-lv-kcc">
-                        <rect key="frame" x="145" y="178" width="141" height="26"/>
-                        <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="dtm-c3-WgU">
-                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="menu"/>
-                            <menu key="menu" id="nfY-1I-ht3"/>
-                        </popUpButtonCell>
-                    </popUpButton>
-                    <box fixedFrame="YES" title="Menus" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="WAE-OC-5tZ">
-                        <rect key="frame" x="17" y="16" width="269" height="111"/>
-                        <view key="contentView" id="3hc-5z-ix8">
-                            <rect key="frame" x="1" y="1" width="267" height="95"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="As5-IX-rCF">
-                                    <rect key="frame" x="18" y="59" width="71" height="18"/>
-                                    <buttonCell key="cell" type="check" title="New file" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="uOr-Hl-jwi">
-                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                        <font key="font" metaFont="system"/>
-                                    </buttonCell>
-                                </button>
-                                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FXf-KF-C4k">
-                                    <rect key="frame" x="18" y="39" width="107" height="18"/>
-                                    <buttonCell key="cell" type="check" title="Copy file path" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="P2g-fZ-Oe0">
-                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                        <font key="font" metaFont="system"/>
-                                    </buttonCell>
-                                </button>
-                                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MxI-lS-QqD">
-                                    <rect key="frame" x="18" y="19" width="122" height="18"/>
-                                    <buttonCell key="cell" type="check" title="Open in terminal" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="sb2-mf-HC9">
-                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                        <font key="font" metaFont="system"/>
-                                    </buttonCell>
-                                </button>
-                            </subviews>
-                        </view>
-                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </box>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XKg-ow-fgE">
-                        <rect key="frame" x="18" y="183" width="101" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Default terminal" id="93K-rP-xfi">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                </subviews>
-            </view>
-            <connections>
-                <outlet property="copyFilePathCheckBox" destination="FXf-KF-C4k" id="5hj-b3-k7W"/>
-                <outlet property="defaultTerminalMenu" destination="nfY-1I-ht3" id="zMC-Lk-Fzx"/>
-                <outlet property="newFileCheckBox" destination="As5-IX-rCF" id="t78-Fw-PKC"/>
-                <outlet property="newFileNameTextField" destination="lhf-bq-Qir" id="dfN-sp-wdr"/>
-                <outlet property="openInTerminalCheckBox" destination="MxI-lS-QqD" id="oRo-Y8-yvl"/>
-            </connections>
-            <point key="canvasLocation" x="536.5" y="353"/>
-        </window>
     </objects>
 </document>

@@ -1,0 +1,21 @@
+
+/* Class = "NSButtonCell"; title = "Copy file path"; ObjectID = "CHg-Eh-8SQ"; */
+"CHg-Eh-8SQ.title" = "파일 이름 복사";
+
+/* Class = "NSWindow"; title = "Preferences"; ObjectID = "OLp-AU-Vmp"; */
+"OLp-AU-Vmp.title" = "설정";
+
+/* Class = "NSTextFieldCell"; title = "New file name"; ObjectID = "PJZ-Hm-ekV"; */
+"PJZ-Hm-ekV.title" = "새로운 파일이름";
+
+/* Class = "NSBox"; title = "Menus"; ObjectID = "Rr7-d5-yaQ"; */
+"Rr7-d5-yaQ.title" = "메뉴";
+
+/* Class = "NSButtonCell"; title = "New file"; ObjectID = "TGv-PQ-xKx"; */
+"TGv-PQ-xKx.title" = "새로운 파일";
+
+/* Class = "NSButtonCell"; title = "Open in terminal"; ObjectID = "Tx4-9j-HRr"; */
+"Tx4-9j-HRr.title" = "터미널에서 열기";
+
+/* Class = "NSTextFieldCell"; title = "Default terminal"; ObjectID = "d0P-4F-q8w"; */
+"d0P-4F-q8w.title" = "기본터미널";

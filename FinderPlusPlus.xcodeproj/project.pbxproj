@@ -13,6 +13,7 @@
 		A72B0D6B1D1BC16C00E45C25 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72B0D6A1D1BC16C00E45C25 /* FinderSync.swift */; };
 		A72B0D6F1D1BC16C00E45C25 /* FinderPlusPlusSync.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A72B0D661D1BC16C00E45C25 /* FinderPlusPlusSync.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A72B0D761D1BC25900E45C25 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A72B0D781D1BC25900E45C25 /* Localizable.strings */; };
+		A76DCA121D37481E00517AB0 /* SettingWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A76DCA141D37481E00517AB0 /* SettingWindow.xib */; };
 		A7F37B3D1D2298230038F542 /* FinderPlusPlusHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F37B3C1D2298230038F542 /* FinderPlusPlusHelper.m */; };
 		A7F37B3F1D2298230038F542 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F37B3E1D2298230038F542 /* main.m */; };
 		A7F37B431D2298230038F542 /* FinderPlusPlusHelper.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = A7F37B381D2298220038F542 /* FinderPlusPlusHelper.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -89,6 +90,8 @@
 		A72B0D7B1D1BC36700E45C25 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		A72B0D7C1D1BC36700E45C25 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A76DCA0F1D37331200517AB0 /* FinderPlusPlus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FinderPlusPlus.entitlements; sourceTree = "<group>"; };
+		A76DCA131D37481E00517AB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SettingWindow.xib; sourceTree = "<group>"; };
+		A76DCA181D37482E00517AB0 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/SettingWindow.strings; sourceTree = "<group>"; };
 		A7F37B381D2298220038F542 /* FinderPlusPlusHelper.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = FinderPlusPlusHelper.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F37B3A1D2298230038F542 /* FinderPlusPlusHelperProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderPlusPlusHelperProtocol.h; sourceTree = "<group>"; };
 		A7F37B3B1D2298230038F542 /* FinderPlusPlusHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderPlusPlusHelper.h; sourceTree = "<group>"; };
@@ -156,6 +159,7 @@
 				A7FF07731D253C6100482642 /* Constants.swift */,
 				A72B0D571D1BC14300E45C25 /* Assets.xcassets */,
 				A72B0D591D1BC14300E45C25 /* MainMenu.xib */,
+				A76DCA141D37481E00517AB0 /* SettingWindow.xib */,
 				A72B0D5C1D1BC14300E45C25 /* Info.plist */,
 			);
 			path = FinderPlusPlus;
@@ -318,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A72B0D581D1BC14300E45C25 /* Assets.xcassets in Resources */,
+				A76DCA121D37481E00517AB0 /* SettingWindow.xib in Resources */,
 				A72B0D5B1D1BC14300E45C25 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +406,15 @@
 				A72B0D7C1D1BC36700E45C25 /* ko */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		A76DCA141D37481E00517AB0 /* SettingWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A76DCA131D37481E00517AB0 /* Base */,
+				A76DCA181D37482E00517AB0 /* ko */,
+			);
+			name = SettingWindow.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

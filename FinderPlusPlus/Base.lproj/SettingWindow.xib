@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSWindowController">
+            <connections>
+                <outlet property="window" destination="OLp-AU-Vmp" id="dUL-up-ana"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" frameAutosaveName="" animationBehavior="default" id="OLp-AU-Vmp" customClass="SettingWindow" customModule="FinderPlusPlus" customModuleProvider="target">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="131" y="165" width="303" height="222"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
+            <value key="minSize" type="size" width="303" height="222"/>
+            <value key="maxSize" type="size" width="303" height="222"/>
+            <view key="contentView" id="CEv-WN-4LQ">
+                <rect key="frame" x="0.0" y="0.0" width="303" height="222"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T6f-O6-PAS">
+                        <rect key="frame" x="18" y="142" width="90" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="New file name" id="PJZ-Hm-ekV">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NeC-AL-0QC">
+                        <rect key="frame" x="147" y="139" width="136" height="22"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Bbr-Dj-A9n">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lC7-zP-EiX">
+                        <rect key="frame" x="145" y="178" width="141" height="26"/>
+                        <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="vmp-Gc-vNx">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" id="VTy-aX-Wd4"/>
+                        </popUpButtonCell>
+                    </popUpButton>
+                    <box fixedFrame="YES" title="Menus" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="Rr7-d5-yaQ">
+                        <rect key="frame" x="17" y="16" width="269" height="111"/>
+                        <view key="contentView" id="d9b-Rg-Ici">
+                            <rect key="frame" x="1" y="1" width="267" height="95"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FTT-Qa-MNz">
+                                    <rect key="frame" x="18" y="59" width="71" height="18"/>
+                                    <buttonCell key="cell" type="check" title="New file" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="TGv-PQ-xKx">
+                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                </button>
+                                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zj7-J2-oNN">
+                                    <rect key="frame" x="18" y="39" width="107" height="18"/>
+                                    <buttonCell key="cell" type="check" title="Copy file path" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="CHg-Eh-8SQ">
+                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                </button>
+                                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oim-4v-8JP">
+                                    <rect key="frame" x="18" y="19" width="122" height="18"/>
+                                    <buttonCell key="cell" type="check" title="Open in terminal" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Tx4-9j-HRr">
+                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                </button>
+                            </subviews>
+                        </view>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </box>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GOF-o7-pj6">
+                        <rect key="frame" x="18" y="183" width="101" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Default terminal" id="d0P-4F-q8w">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="copyFilePathCheckBox" destination="zj7-J2-oNN" id="08R-oS-O5q"/>
+                <outlet property="defaultTerminalMenu" destination="VTy-aX-Wd4" id="HCN-0b-r1X"/>
+                <outlet property="newFileCheckBox" destination="FTT-Qa-MNz" id="Xga-ix-LCz"/>
+                <outlet property="newFileNameTextField" destination="NeC-AL-0QC" id="AIM-Je-Qau"/>
+                <outlet property="openInTerminalCheckBox" destination="oim-4v-8JP" id="vOa-0j-vWN"/>
+            </connections>
+            <point key="canvasLocation" x="372.5" y="284"/>
+        </window>
+    </objects>
+</document>
