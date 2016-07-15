@@ -2,10 +2,12 @@ FinderPlusPlus
 ===
 
 
-FinderPlusPlus is finder extension which add some functions in right click menu
-in finder without unlocking OS X SIP(Security Integrity Protection, Rootless)
+FinderPlusPlus is a finder extension which adds some functions
+in right click menu in the Finder without unlocking OS X SIP (Security
+Integrity Protection, Rootless)
 
-You can download app in [here](https://github.com/Luavis/FinderPlusPlus/releases/tag/1.0)
+You can download the application file from
+[here](https://github.com/Luavis/FinderPlusPlus/releases/tag/1.0)
 
 In current version there are three functions,
 
